@@ -1,0 +1,15 @@
+<md-icon md-svg-icon="{{$ctrl.selected.avatar}}" class="avatar"></md-icon>
+<h2>{{$ctrl.selected.name}}</h2>
+
+  <table>
+  <tr>
+    <td>Time</td>
+    <td ng-repeat="round in $ctrl.details[0].rounds">{{ "turno " + round.id }}</td>
+    <td>Total</td>
+  </tr>
+  <tr ng-repeat="detail in $ctrl.details">
+    <td>{{ detail.team }}</td>
+    <td ng-repeat="round in detail.rounds">{{ round.score }}</td>
+    <td>{{ detail.total }}</td>
+  </tr>
+</table>
